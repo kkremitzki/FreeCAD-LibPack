@@ -24,6 +24,6 @@ jobs:
           where.exe 7z
           where.exe win_bison
       - name: Run build command
-        shell: pwsh
+        shell: cmd
         run: |
           python.exe create_libpack.py
