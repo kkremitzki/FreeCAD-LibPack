@@ -18,3 +18,7 @@ jobs:
           choco install winflexbison3
           pip install requests
           pip install diff-match-patch
+      - name: Run build command
+        shell: pwsh
+        run: |
+          python.exe create_libpack
