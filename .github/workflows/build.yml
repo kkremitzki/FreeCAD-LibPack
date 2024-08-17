@@ -18,7 +18,12 @@ jobs:
           choco install winflexbison3
           pip install requests
           pip install diff-match-patch
+      - name: Find paths for tools
+        shell: pwsh
+        run: |
+          where 7z
+          where bison
       - name: Run build command
         shell: pwsh
         run: |
-          python.exe create_libpack
+          python.exe create_libpack.py
