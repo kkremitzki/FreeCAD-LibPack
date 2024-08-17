@@ -26,4 +26,4 @@ jobs:
       - name: Run build command
         shell: cmd
         run: |
-          python.exe create_libpack.py
+          python.exe create_libpack.py --7zip C:\ProgramData\Chocolatey\bin\7z.exe --bison C:\ProgramData\Chocolatey\bin\win_bison.exe
