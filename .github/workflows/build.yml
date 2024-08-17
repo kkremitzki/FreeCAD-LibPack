@@ -21,8 +21,8 @@ jobs:
       - name: Find paths for tools
         shell: pwsh
         run: |
-          where 7z
-          where bison
+          where.exe 7z
+          where.exe win_bison
       - name: Run build command
         shell: pwsh
         run: |
