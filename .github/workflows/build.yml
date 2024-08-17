@@ -1,4 +1,4 @@
-name: Run commands on different operating systems
+name: Build FreeCAD-Libpack
 on:
   push:
     branches: [ main ]
@@ -6,17 +6,15 @@ on:
     branches: [ main ]
 
 jobs:
-  Run-PSScriptAnalyzer-on-Windows:
-    name: Run PSScriptAnalyzer on Windows
+  Build-Libpack:
+    name: Build the FreeCAD-Libpack
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install PSScriptAnalyzer module
+      - name: Install dependencies
         shell: pwsh
         run: |
-          Set-PSRepository PSGallery -InstallationPolicy Trusted
-          Install-Module PSScriptAnalyzer -ErrorAction Stop
-      - name: Get list of rules
-        shell: pwsh
-        run: |
-          Get-ScriptAnalyzerRule
+          dir
+          choco install winflexbison3
+          pip install requests
+          pip install diff-match-patch
