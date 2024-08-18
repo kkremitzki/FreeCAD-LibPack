@@ -51,7 +51,7 @@ import compile_all
 
 path_to_7zip = "C:\\Program Files\\7-Zip\\7z.exe"
 path_to_bison = "C:\\Program Files\\win_flex_bison\\win_bison.exe"
-devel_init_script = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\Build\\vcvars64.bat"
+devel_init_script = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Auxiliary\\Build\\vcvars64.bat"
 
 
 def remove_readonly(func, path, _) -> None:
