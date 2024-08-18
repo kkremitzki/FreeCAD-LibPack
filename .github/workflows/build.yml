@@ -16,6 +16,7 @@ jobs:
         run: |
           dir
           choco install winflexbison3
+          choco install qt6-base-dev
           pip install requests
           pip install diff-match-patch
       - name: Find paths for tools
