@@ -1,9 +1,9 @@
 name: Build FreeCAD-Libpack
 on:
   push:
-    branches: [ main ]
+    branches: [ 'main', 'actions-experiment-v2' ]
   pull_request:
-    branches: [ main ]
+    branches: [ 'main', 'actions-experiment-v2' ]
 
 jobs:
   Build-Libpack:
